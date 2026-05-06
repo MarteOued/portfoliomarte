@@ -1,0 +1,42 @@
+<svg width="1400" height="900" viewBox="0 0 1400 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1400" height="900" fill="#050816"/>
+  <rect x="80" y="70" width="1240" height="760" rx="42" fill="#0B1220" stroke="#254060" stroke-width="2"/>
+  <circle cx="1130" cy="170" r="220" fill="#10B981" opacity="0.16"/>
+  <circle cx="310" cy="735" r="260" fill="#3B82F6" opacity="0.15"/>
+  <rect x="140" y="135" width="1120" height="88" rx="24" fill="#101A2E" stroke="#233859"/>
+  <text x="180" y="190" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800">LLM Emotions B2B</text>
+  <text x="835" y="187" fill="#94A3B8" font-family="Inter, Arial, sans-serif" font-size="20">Prompt engineering · Metrics · Streamlit</text>
+  <rect x="140" y="270" width="500" height="430" rx="28" fill="#111827" stroke="#1F3B55"/>
+  <text x="180" y="330" fill="#38BDF8" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">Scenario client</text>
+  <text x="180" y="385" fill="#E2E8F0" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800">Panne SaaS critique</text>
+  <text x="180" y="435" fill="#CBD5E1" font-family="Inter, Arial, sans-serif" font-size="22">Le service est indisponible</text>
+  <text x="180" y="468" fill="#CBD5E1" font-family="Inter, Arial, sans-serif" font-size="22">pour un client B2B premium.</text>
+  <rect x="180" y="535" width="155" height="48" rx="14" fill="#10B981" opacity="0.18" stroke="#10B981"/>
+  <text x="205" y="566" fill="#6EE7B7" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">Empathique</text>
+  <rect x="355" y="535" width="155" height="48" rx="14" fill="#3B82F6" opacity="0.18" stroke="#3B82F6"/>
+  <text x="383" y="566" fill="#93C5FD" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">Semi-formel</text>
+  <rect x="180" y="610" width="240" height="54" rx="16" fill="url(#button)"/>
+  <text x="220" y="645" fill="white" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800">Generer la reponse</text>
+  <rect x="700" y="270" width="560" height="430" rx="28" fill="#0F172A" stroke="#21476B"/>
+  <text x="740" y="330" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800">Reponse generee</text>
+  <rect x="740" y="370" width="480" height="190" rx="22" fill="#111C30" stroke="#243A58"/>
+  <text x="775" y="425" fill="#E2E8F0" font-family="Inter, Arial, sans-serif" font-size="22">Nous comprenons l'impact</text>
+  <text x="775" y="458" fill="#E2E8F0" font-family="Inter, Arial, sans-serif" font-size="22">de cette interruption.</text>
+  <text x="775" y="510" fill="#CBD5E1" font-family="Inter, Arial, sans-serif" font-size="20">Plan d'action : diagnostic,</text>
+  <text x="775" y="542" fill="#CBD5E1" font-family="Inter, Arial, sans-serif" font-size="20">correctif, suivi client.</text>
+  <rect x="740" y="600" width="130" height="58" rx="16" fill="#10B981" opacity="0.2" stroke="#10B981"/>
+  <text x="765" y="637" fill="#6EE7B7" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800">142</text>
+  <text x="810" y="637" fill="#A7F3D0" font-family="Inter, Arial, sans-serif" font-size="15">mots</text>
+  <rect x="895" y="600" width="130" height="58" rx="16" fill="#3B82F6" opacity="0.2" stroke="#3B82F6"/>
+  <text x="943" y="637" fill="#93C5FD" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800">4</text>
+  <text x="970" y="637" fill="#BFDBFE" font-family="Inter, Arial, sans-serif" font-size="15">actions</text>
+  <rect x="1050" y="600" width="130" height="58" rx="16" fill="#A855F7" opacity="0.2" stroke="#A855F7"/>
+  <text x="1098" y="637" fill="#D8B4FE" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800">3</text>
+  <text x="1125" y="637" fill="#E9D5FF" font-family="Inter, Arial, sans-serif" font-size="15">ton</text>
+  <defs>
+    <linearGradient id="button" x1="180" y1="610" x2="420" y2="664" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#10B981"/>
+      <stop offset="1" stop-color="#3B82F6"/>
+    </linearGradient>
+  </defs>
+</svg>
