@@ -324,6 +324,10 @@ export const skills = {
   ],
   languages: ["Python (Pandas, NumPy)", "R", "SQL (PostgreSQL, MySQL)", "PySpark"],
   viz: ["Streamlit", "Plotly", "Power BI"],
+  web: [
+    "JavaScript", "TypeScript", "HTML / CSS", "Tailwind CSS", "React", "React Native",
+    "Node.js / Express", "Django REST", "FastAPI", "Symfony 7 / PHP", "API REST", "WebSocket / Socket.io", "JWT"
+  ],
   soft: ["Adaptabilité interculturelle (4 pays, 4 écoles)", "Autonomie", "Curiosité", "Vision end-to-end", "Rigueur"]
 };
 

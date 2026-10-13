@@ -1,6 +1,6 @@
 // src/components/Skills.jsx
 import { motion } from 'framer-motion';
-import { Brain, Code2, Cloud, Sparkles, BarChart3, TrendingUp, FlaskConical } from 'lucide-react';
+import { Brain, Code2, Globe, Cloud, Sparkles, BarChart3, TrendingUp, FlaskConical } from 'lucide-react';
 import { skills, projectsData } from '../data/projectsData';
 
 const Skills = () => {
@@ -44,6 +44,14 @@ const Skills = () => {
       skills: skills.viz,
       gradient: 'from-emerald-500 via-green-500 to-teal-500',
       description: 'Applications et tableaux de bord'
+    },
+    {
+      id: 'web',
+      title: 'Développement web & full-stack',
+      icon: Globe,
+      skills: skills.web,
+      gradient: 'from-sky-500 via-blue-500 to-indigo-500',
+      description: 'Applications web et mobile, APIs et temps réel'
     }
   ];
 
