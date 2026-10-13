@@ -60,7 +60,7 @@ const Hero = () => {
             >
               <Sparkles size={16} className="text-primary" />
               <span className="text-sm font-medium bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                Recherche alternance Data / IA • Septembre 2026
+                Recherche stage ML / IA • 4 à 6 mois • Mars 2027
               </span>
             </motion.div>
 
@@ -97,7 +97,7 @@ const Hero = () => {
             >
               <div className="flex items-center gap-2 px-4 py-2 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10">
                 <Database size={20} className="text-primary" />
-                <span className="text-lg font-semibold text-white">Data & IA Junior</span>
+                <span className="text-lg font-semibold text-white">Machine Learning & IA</span>
               </div>
               <div className="text-2xl text-white/40">×</div>
               <div className="flex items-center gap-2 px-4 py-2 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10">
@@ -113,9 +113,9 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="text-xl text-gray-400 mb-10 leading-relaxed max-w-xl"
             >
-              Étudiante en Master 1 Informatique à Lyon 2, je construis des projets concrets en machine learning,
-              IA générative, BI et développement full-stack. Je recherche une alternance dès septembre 2026
-              en Data Science, Data Analysis, ML Engineering ou Data Engineering.
+              Étudiante en Master 2 Machine Learning for AI (MALIA) à Lyon 2, je conçois des modèles de bout en bout,
+              de la préparation des données au déploiement : séries temporelles, co-clustering, IA générative et
+              applications full-stack. Je recherche un stage de 4 à 6 mois en Machine Learning / IA à partir de mars 2027.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -230,7 +230,7 @@ const Hero = () => {
                   <div className="h-full bg-black rounded-3xl overflow-hidden">
                     <img 
                       src="/projects/MARTEI.jpeg"
-                      alt="Martine - Data Scientist Junior"
+                      alt="Martine Ouedraogo - Machine Learning & IA"
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -251,8 +251,8 @@ const Hero = () => {
                 <div className="flex items-center gap-3">
                   <div className="text-2xl">🎓</div>
                   <div>
-                    <div className="text-sm font-bold text-white">Master 1 Informatique</div>
-                    <div className="text-xs text-gray-400">Lyon • Meilleure note: 19/20</div>
+                    <div className="text-sm font-bold text-white">Master 2 MALIA</div>
+                    <div className="text-xs text-gray-400">Lyon 2 • Machine Learning for AI</div>
                   </div>
                 </div>
               </motion.div>

@@ -128,7 +128,7 @@ const Contact = () => {
           </h2>
           
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Vous recrutez en data, IA ou engineering ? Je serais ravie d'échanger autour d'une alternance.
+            Vous recrutez en Machine Learning ou en IA ? Je serais ravie d'échanger autour d'un stage de 4 à 6 mois.
           </p>
         </motion.div>
 
@@ -191,7 +191,7 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Alternance Card */}
+            {/* Stage Card */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -205,25 +205,25 @@ const Contact = () => {
                   <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center">
                     <Briefcase size={24} className="text-white" />
                   </div>
-                  <h4 className="text-xl font-black text-white">Recherche d'alternance</h4>
+                  <h4 className="text-xl font-black text-white">Recherche de stage</h4>
                 </div>
                 
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  Je recherche une <span className="text-white font-bold">alternance à partir de septembre 2026</span>. Rythme visé : <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent font-bold">3 semaines en formation / 2 semaines en entreprise</span>, avec disponibilité temps plein dès juillet 2026.
+                  Je recherche un <span className="text-white font-bold">stage de 4 à 6 mois en Machine Learning / IA</span>, <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent font-bold">disponible à partir de mars 2027</span>, dans le cadre de mon Master 2 MALIA à Lyon 2.
                 </p>
                 
                 <div className="flex flex-wrap gap-2 mb-6">
                   <span className="px-4 py-2 bg-gradient-to-r from-purple-500/20 to-purple-500/10 border border-purple-500/30 text-purple-300 rounded-xl text-sm font-bold">
-                    Data Science
-                  </span>
-                  <span className="px-4 py-2 bg-gradient-to-r from-blue-500/20 to-blue-500/10 border border-blue-500/30 text-blue-300 rounded-xl text-sm font-bold">
                     Machine Learning
                   </span>
+                  <span className="px-4 py-2 bg-gradient-to-r from-blue-500/20 to-blue-500/10 border border-blue-500/30 text-blue-300 rounded-xl text-sm font-bold">
+                    IA générative
+                  </span>
                   <span className="px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-cyan-500/10 border border-cyan-500/30 text-cyan-300 rounded-xl text-sm font-bold">
-                    Data Engineering
+                    Séries temporelles
                   </span>
                   <span className="px-4 py-2 bg-gradient-to-r from-green-500/20 to-green-500/10 border border-green-500/30 text-green-300 rounded-xl text-sm font-bold">
-                    Data Analysis
+                    MLOps
                   </span>
                 </div>
 
@@ -293,7 +293,7 @@ const Contact = () => {
                     name="subject"
                     required
                     className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
-                    placeholder="Opportunité d'alternance"
+                    placeholder="Opportunité de stage"
                   />
                 </div>
 

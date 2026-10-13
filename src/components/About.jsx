@@ -5,25 +5,33 @@ import { GraduationCap, MapPin, Calendar, Award, Sparkles, Target, Zap, Globe } 
 const About = () => {
   const education = [
     {
-      degree: "Master 1 Informatique",
-      school: "Université Lumière Lyon 2",
-      period: "2025 - En cours",
+      degree: "Master 2 Machine Learning for AI (MALIA)",
+      school: "Université Lumière Lyon 2, campus de Bron",
+      period: "2026 - 2027",
       icon: GraduationCap,
       gradient: "from-purple-500 to-pink-500",
       status: "En cours"
     },
     {
-      degree: "Bachelor en Informatique",
-      school: "École IT, Belgique",
-      period: "Févr. 2025 - Août. 2025",
+      degree: "Master 1 Informatique, parcours Data Science",
+      school: "Université Lumière Lyon 2",
+      period: "2025 - 2026",
+      icon: GraduationCap,
+      gradient: "from-emerald-500 to-teal-500",
+      status: "Validé"
+    },
+    {
+      degree: "Bachelor Développement & Intelligence Artificielle",
+      school: "ECOLE-IT, Bruxelles, Belgique",
+      period: "2024 - 2025",
       icon: Award,
       gradient: "from-blue-500 to-cyan-500",
       status: "Diplômée"
     },
     {
-      degree: "Licence Ingénierie des Systèmes Informatiques",
-      school: "SUPMTI, Maroc",
-      period: "Oct. 2021 - Juil. 2024",
+      degree: "Licence Génie Logiciel & Systèmes d'Information",
+      school: "SUPMTI, Rabat, Maroc",
+      period: "2022 - 2024",
       icon: GraduationCap,
       gradient: "from-orange-500 to-yellow-500",
       status: "Diplômée"
@@ -34,7 +42,7 @@ const About = () => {
     { 
       icon: Target,
       label: "Data Science", 
-      value: "Machine Learning & Deep Learning",
+      value: "Machine Learning, séries temporelles, co-clustering",
       gradient: "from-purple-500 to-pink-500"
     },
     { 
@@ -46,13 +54,13 @@ const About = () => {
     { 
       icon: Globe,
       label: "Langages", 
-      value: "Python, JavaScript, PHP, Java",
+      value: "Python, R, SQL, JavaScript",
       gradient: "from-green-500 to-teal-500"
     },
     { 
       icon: Calendar,
       label: "Recherche", 
-      value: "Alternance dès Septembre 2026",
+      value: "Stage ML / IA, 4 à 6 mois dès mars 2027",
       gradient: "from-orange-500 to-red-500"
     },
   ];
@@ -137,13 +145,13 @@ const About = () => {
                 
                 <div className="space-y-4 text-gray-300 leading-relaxed">
                   <p>
-                    Étudiante en <span className="text-white font-bold">Master 1 Informatique</span> à l'Université Lumière Lyon 2, je me spécialise dans la <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent font-bold">Data Science et le Machine Learning</span>.
+                    Étudiante en <span className="text-white font-bold">Master 2 Machine Learning for AI (MALIA)</span> à l'Université Lumière Lyon 2, je me spécialise dans le <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent font-bold">Machine Learning et l'IA</span>.
                   </p>
                   <p>
-                    Curieuse et autonome, j'ai développé des modèles prédictifs atteignant <span className="text-primary font-bold">88,9% d'accuracy</span>, construit des pipelines ETL/BI et expérimenté avec les LLM via des prototypes de prompt engineering.
+                    Je conçois des modèles de bout en bout : prévision de la consommation électrique nationale (<span className="text-primary font-bold">MAE de 1 331 MW</span> sur un test jamais utilisé pour régler les modèles), prédiction de résultats académiques (<span className="text-primary font-bold">88,9 % de précision</span>), package R de co-clustering et prototype d'IA générative.
                   </p>
                   <p>
-                    Mon objectif : trouver une <span className="text-secondary font-bold">alternance en septembre 2026</span> en Data Science, Data Analysis, ML Engineering ou Data Engineering, dans une équipe où je peux transformer des besoins métier en solutions fiables.
+                    Mon objectif : un <span className="text-secondary font-bold">stage de 4 à 6 mois en Machine Learning / IA à partir de mars 2027</span>, dans une équipe où je peux contribuer à des solutions d'IA fiables, avec une évaluation rigoureuse.
                   </p>
                 </div>
 
@@ -270,7 +278,7 @@ const About = () => {
                     </div>
                     <div>
                       <div className="text-xs text-gray-400">Disponibilité</div>
-                      <div className="text-white font-semibold">Alternance • Septembre 2026</div>
+                      <div className="text-white font-semibold">Stage ML / IA • Mars 2027</div>
                     </div>
                   </div>
 
@@ -281,7 +289,7 @@ const About = () => {
                         🇫🇷 Français - Courant
                       </span>
                       <span className="px-4 py-2 bg-gradient-to-r from-secondary/20 to-secondary/10 border border-secondary/30 text-secondary rounded-xl text-sm font-bold">
-                        🇬🇧 Anglais - Intermédiaire
+                        🇬🇧 Anglais - Intermédiaire (B1/B2)
                       </span>
                     </div>
                   </div>

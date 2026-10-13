@@ -7,49 +7,37 @@ import {
   Code2,
   BarChart3,
   LineChart,
-  Brain,
-  ShieldAlert,
-  Zap,
-  Sparkles,
-  CheckCircle,
+  Database,
   Cpu
 } from 'lucide-react';
 
 const CurrentMission = () => {
-  const missions = [
+  const experiences = [
     {
-      icon: Code2,
-      text: "Refactorisation d'une application FastAPI : architecture, sécurité et tests",
-      gradient: "from-blue-500 to-cyan-500"
+      title: "Stagiaire Développeuse Full-Stack & Data",
+      company: "Oued Services",
+      location: "Le Blanc-Mesnil, Île-de-France",
+      period: "Mai - Août 2026",
+      gradient: "from-blue-500 to-cyan-500",
+      points: [
+        { icon: Code2, text: "Développement solo et déploiement en production (malipoulet.com) d'une application full-stack de gestion de restaurant : caisse POS, cuisine KDS temps réel (WebSocket), stocks, clients, livraisons et trésorerie" },
+        { icon: LineChart, text: "Module de prévisions financières multi-scénarios (pessimiste, réaliste, optimiste), seuil de rentabilité et dashboard analytique" }
+      ],
+      stack: ["Python", "FastAPI", "Django REST", "React", "PostgreSQL", "Pandas", "Scikit-Learn", "Streamlit", "Docker"]
     },
     {
-      icon: BarChart3,
-      text: "Analyse exploratoire des données ventes, stocks et clients",
-      gradient: "from-purple-500 to-pink-500"
-    },
-    {
-      icon: LineChart,
-      text: "Définition des KPI métiers de pilotage opérationnel",
-      gradient: "from-emerald-500 to-teal-500"
-    },
-    {
-      icon: Brain,
-      text: "Modèle de prévision des ventes avec Scikit-Learn et séries temporelles",
-      gradient: "from-orange-500 to-yellow-500"
-    },
-    {
-      icon: ShieldAlert,
-      text: "Détection d'anomalies sur les flux de transactions",
-      gradient: "from-red-500 to-rose-500"
-    },
-    {
-      icon: Zap,
-      text: "Intégration d'un prototype IA dans un dashboard Streamlit",
-      gradient: "from-violet-500 to-fuchsia-500"
+      title: "Stagiaire Data & Analyse",
+      company: "STIB (Transports Intercommunaux de Bruxelles)",
+      location: "Bruxelles, Belgique",
+      period: "Juin - Juillet 2025",
+      gradient: "from-purple-500 to-pink-500",
+      points: [
+        { icon: BarChart3, text: "Analyse des données de fréquentation et de ponctualité du réseau ; tableaux de bord et indicateurs clés" },
+        { icon: Database, text: "Extraction, nettoyage et transformation de données multi-sources (SQL, Python, Excel)" }
+      ],
+      stack: ["Python", "SQL / PL-SQL", "Excel", "Power BI", "Tableau"]
     }
   ];
-
-  const stack = ["Python", "FastAPI", "Pandas", "Scikit-Learn", "Streamlit", "Docker"];
 
   return (
     <section id="mission" className="relative py-32 bg-black overflow-hidden">
@@ -78,113 +66,79 @@ const CurrentMission = () => {
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary/20 to-secondary/20 backdrop-blur-sm border border-primary/30 rounded-full mb-6">
             <Briefcase size={16} className="text-primary" />
             <span className="text-sm font-medium bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              Expérience actuelle
+              Parcours professionnel
             </span>
           </div>
 
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-black mb-6">
             <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
-              Mission en Cours
+              Expériences
             </span>
           </h2>
 
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Stagiaire Full-Stack Python & Data Science chez Oued Service, je travaille sur des sujets concrets de data, backend et IA appliquée.
+            Deux stages, de la data au déploiement en production : analyse de données de transport à Bruxelles, puis application full-stack en production pour un restaurant.
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-[1.25fr_0.75fr] gap-8 items-stretch">
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="relative group"
-          >
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-3xl blur-2xl opacity-50 group-hover:opacity-70 transition-opacity" />
-            <div className="relative h-full bg-gradient-to-br from-white/5 to-white/0 backdrop-blur-sm rounded-3xl p-8 border border-white/10 hover:border-white/30 transition-all duration-500">
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
-                <div>
-                  <h3 className="text-2xl md:text-3xl font-black text-white mb-2">
-                    Full-Stack Python & Data Science
-                  </h3>
-                  <p className="text-gray-400">Oued Service</p>
+        <div className="grid lg:grid-cols-2 gap-8 items-stretch">
+          {experiences.map((exp, index) => (
+            <motion.div
+              key={exp.company}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: index * 0.15 }}
+              className="relative group"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-3xl blur-2xl opacity-50 group-hover:opacity-70 transition-opacity" />
+              <div className="relative h-full bg-gradient-to-br from-white/5 to-white/0 backdrop-blur-sm rounded-3xl p-8 border border-white/10 hover:border-white/30 transition-all duration-500">
+                <div className="mb-6">
+                  <h3 className="text-2xl font-black text-white mb-1">{exp.title}</h3>
+                  <p className="text-gray-300 font-semibold mb-4">{exp.company}</p>
+                  <div className="flex flex-wrap gap-3">
+                    <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm font-semibold text-gray-300">
+                      <MapPin size={16} className="text-primary" />
+                      {exp.location}
+                    </span>
+                    <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm font-semibold text-gray-300">
+                      <Calendar size={16} className="text-secondary" />
+                      {exp.period}
+                    </span>
+                  </div>
                 </div>
-                <div className="flex flex-wrap gap-3">
-                  <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm font-semibold text-gray-300">
-                    <MapPin size={16} className="text-primary" />
-                    Blanc-Mesnil
-                  </span>
-                  <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm font-semibold text-gray-300">
-                    <Calendar size={16} className="text-secondary" />
-                    Avril 2026 - En cours
-                  </span>
-                </div>
-              </div>
 
-              <div className="grid md:grid-cols-2 gap-4">
-                {missions.map((mission, index) => (
-                  <motion.div
-                    key={mission.text}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.08 }}
-                    className="group/item flex items-start gap-4 p-5 bg-white/5 border border-white/10 rounded-2xl hover:border-white/30 hover:bg-white/10 transition-all duration-300"
-                  >
-                    <div className={`w-11 h-11 rounded-xl bg-gradient-to-br ${mission.gradient} flex items-center justify-center flex-shrink-0 group-hover/item:scale-110 transition-transform`}>
-                      <mission.icon size={20} className="text-white" />
+                <div className="space-y-4 mb-6">
+                  {exp.points.map((point) => (
+                    <div
+                      key={point.text}
+                      className="flex items-start gap-4 p-4 bg-white/5 border border-white/10 rounded-2xl"
+                    >
+                      <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${exp.gradient} flex items-center justify-center flex-shrink-0`}>
+                        <point.icon size={18} className="text-white" />
+                      </div>
+                      <p className="text-gray-300 leading-relaxed">{point.text}</p>
                     </div>
-                    <p className="text-gray-300 leading-relaxed">{mission.text}</p>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="relative group"
-          >
-            <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 to-primary/20 rounded-3xl blur-2xl opacity-50 group-hover:opacity-70 transition-opacity" />
-            <div className="relative h-full bg-gradient-to-br from-primary/10 to-secondary/10 backdrop-blur-sm rounded-3xl p-8 border border-primary/30">
-              <div className="flex items-center gap-3 mb-8">
-                <div className="w-12 h-12 bg-gradient-to-br from-secondary to-primary rounded-xl flex items-center justify-center">
-                  <Cpu size={24} className="text-white" />
+                  ))}
                 </div>
-                <h3 className="text-2xl font-black text-white">Stack utilisée</h3>
-              </div>
 
-              <div className="flex flex-wrap gap-3 mb-8">
-                {stack.map((tech) => (
-                  <span
-                    key={tech}
-                    className="px-4 py-2 bg-white/10 border border-white/15 rounded-xl text-sm font-bold text-white hover:border-primary/50 transition-all"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-
-              <div className="space-y-4">
-                <div className="flex items-start gap-3 p-4 bg-white/5 rounded-2xl border border-white/10">
-                  <CheckCircle size={20} className="text-primary mt-1 flex-shrink-0" />
-                  <p className="text-gray-300">
-                    Une mission qui relie backend, analyse de données, modèles prédictifs et dashboard métier.
-                  </p>
+                <div className="flex items-center gap-2 mb-3 text-sm text-gray-400">
+                  <Cpu size={16} className="text-primary" />
+                  Stack
                 </div>
-                <div className="flex items-start gap-3 p-4 bg-white/5 rounded-2xl border border-white/10">
-                  <Sparkles size={20} className="text-secondary mt-1 flex-shrink-0" />
-                  <p className="text-gray-300">
-                    Un contexte idéal pour préparer une alternance data / IA orientée impact opérationnel.
-                  </p>
+                <div className="flex flex-wrap gap-2">
+                  {exp.stack.map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-3 py-1.5 bg-white/10 border border-white/15 rounded-xl text-sm font-bold text-white"
+                    >
+                      {tech}
+                    </span>
+                  ))}
                 </div>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
