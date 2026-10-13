@@ -306,35 +306,19 @@ export const projectsData = [
 ];
 
 export const skills = {
-  dataScience: [
-    { name: "Python", level: 90 },
-    { name: "Machine Learning", level: 86 },
-    { name: "Prompt Engineering / LLM", level: 84 },
-    { name: "Scikit-Learn", level: 85 },
-    { name: "Pandas & NumPy", level: 90 },
-    { name: "Data Visualization", level: 84 },
-    { name: "PySpark / Dataiku", level: 72 },
-    { name: "BI Tableau / Power BI", level: 82 },
+  ml: [
+    "Apprentissage supervisé et non supervisé", "Réseaux de neurones", "Scikit-Learn", "XGBoost",
+    "Random Forest", "SVM", "ACP / PCA", "Clustering / Co-clustering",
+    "Séries temporelles (ACF / PACF)", "Validation croisée", "PyTorch", "Keras", "TensorFlow"
   ],
-  development: [
-    { name: "React / React Native", level: 85 },
-    { name: "Node.js / Express", level: 78 },
-    { name: "Symfony 7 / PHP", level: 80 },
-    { name: "Streamlit", level: 88 },
-    { name: "SQL / PostgreSQL", level: 84 },
-    { name: "FastAPI", level: 78 },
-    { name: "API REST", level: 85 },
-    { name: "Docker", level: 75 },
+  genai: ["LLM (API OpenAI, prompt engineering)", "Ollama", "RAG", "spaCy", "TF-IDF"],
+  mlops: [
+    "MLOps", "MLflow", "Docker", "Kubernetes", "AWS", "Databricks",
+    "Airflow", "Git / GitHub", "pytest", "FastAPI", "Dataiku"
   ],
-  tools: [
-    { name: "Git / GitHub", level: 85 },
-    { name: "Jupyter Notebook", level: 88 },
-    { name: "Tableau / Power BI", level: 82 },
-    { name: "Airflow / MLflow", level: 68 },
-    { name: "Tests Jest", level: 74 },
-    { name: "Agile / Scrum", level: 82 },
-    { name: "ETL & Data Warehouse", level: 78 },
-  ]
+  languages: ["Python (Pandas, NumPy)", "R", "SQL (PostgreSQL, MySQL)", "PySpark"],
+  viz: ["Streamlit", "Plotly", "Power BI"],
+  soft: ["Adaptabilité interculturelle (4 pays, 4 écoles)", "Autonomie", "Curiosité", "Vision end-to-end", "Rigueur"]
 };
 
 export const contact = {

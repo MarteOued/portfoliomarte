@@ -1,33 +1,49 @@
 // src/components/Skills.jsx
 import { motion } from 'framer-motion';
-import { Brain, Code2, Wrench, Sparkles, TrendingUp, Award } from 'lucide-react';
-import { skills } from '../data/projectsData';
+import { Brain, Code2, Cloud, Sparkles, BarChart3, TrendingUp, FlaskConical } from 'lucide-react';
+import { skills, projectsData } from '../data/projectsData';
 
 const Skills = () => {
   const skillCategories = [
     {
-      id: 'dataScience',
-      title: 'Data Science & ML',
+      id: 'ml',
+      title: 'Machine Learning & Deep Learning',
       icon: Brain,
-      skills: skills.dataScience,
+      skills: skills.ml,
       gradient: 'from-purple-500 via-pink-500 to-red-500',
-      description: 'Intelligence artificielle et analyse de données'
+      description: 'Modèles supervisés, non supervisés et séries temporelles'
     },
     {
-      id: 'development',
-      title: 'Développement',
-      icon: Code2,
-      skills: skills.development,
+      id: 'genai',
+      title: 'IA générative & NLP',
+      icon: Sparkles,
+      skills: skills.genai,
+      gradient: 'from-violet-500 via-fuchsia-500 to-pink-500',
+      description: 'LLM, RAG et traitement du langage'
+    },
+    {
+      id: 'mlops',
+      title: 'MLOps & Cloud',
+      icon: Cloud,
+      skills: skills.mlops,
       gradient: 'from-blue-500 via-cyan-500 to-teal-500',
-      description: 'Full-stack et architectures modernes'
+      description: 'Déploiement, suivi d\'expériences et orchestration'
     },
     {
-      id: 'tools',
-      title: 'Outils & Méthodologies',
-      icon: Wrench,
-      skills: skills.tools,
+      id: 'languages',
+      title: 'Langages & données',
+      icon: Code2,
+      skills: skills.languages,
       gradient: 'from-orange-500 via-yellow-500 to-amber-500',
-      description: 'DevOps et gestion de projet agile'
+      description: 'Programmation et traitement de données'
+    },
+    {
+      id: 'viz',
+      title: 'Visualisation & restitution',
+      icon: BarChart3,
+      skills: skills.viz,
+      gradient: 'from-emerald-500 via-green-500 to-teal-500',
+      description: 'Applications et tableaux de bord'
     }
   ];
 
@@ -85,12 +101,12 @@ const Skills = () => {
           </h2>
           
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Un ensemble de technologies et méthodologies maîtrisées pour créer des solutions innovantes
+            Les outils que j'utilise pour concevoir, évaluer et déployer des modèles de bout en bout
           </p>
         </motion.div>
 
         {/* Skills Categories */}
-        <div className="grid lg:grid-cols-3 gap-8 mb-20">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
               key={category.id}
@@ -122,44 +138,18 @@ const Skills = () => {
                 </div>
 
                 {/* Skills List */}
-                <div className="relative space-y-5">
+                <div className="relative flex flex-wrap gap-2">
                   {category.skills.map((skill, skillIndex) => (
-                    <motion.div
-                      key={skill.name}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
+                    <motion.span
+                      key={skill}
+                      initial={{ opacity: 0, y: 10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
-                      transition={{ delay: categoryIndex * 0.2 + skillIndex * 0.1 }}
-                      className="group/skill"
+                      transition={{ delay: categoryIndex * 0.1 + skillIndex * 0.03 }}
+                      className="px-3 py-1.5 bg-white/5 border border-white/10 rounded-xl text-sm font-semibold text-gray-300 hover:text-white hover:border-white/30 transition-colors"
                     >
-                      {/* Skill Name & Level */}
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="text-gray-300 font-semibold group-hover/skill:text-white transition-colors">
-                          {skill.name}
-                        </span>
-                        <span className={`text-sm font-bold bg-gradient-to-r ${category.gradient} bg-clip-text text-transparent`}>
-                          {skill.level}%
-                        </span>
-                      </div>
-                      
-                      {/* Progress Bar Container */}
-                      <div className="relative h-2 bg-white/5 rounded-full overflow-hidden">
-                        {/* Background Glow */}
-                        <div className={`absolute inset-0 bg-gradient-to-r ${category.gradient} opacity-20 blur-sm`} />
-                        
-                        {/* Progress Bar */}
-                        <motion.div
-                          initial={{ width: 0 }}
-                          whileInView={{ width: `${skill.level}%` }}
-                          viewport={{ once: true }}
-                          transition={{ duration: 1, delay: categoryIndex * 0.2 + skillIndex * 0.1 + 0.3 }}
-                          className={`relative h-full bg-gradient-to-r ${category.gradient} rounded-full`}
-                        >
-                          {/* Shimmer Effect */}
-                          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-shimmer" />
-                        </motion.div>
-                      </div>
-                    </motion.div>
+                      {skill}
+                    </motion.span>
                   ))}
                 </div>
               </div>
@@ -180,26 +170,26 @@ const Skills = () => {
               {[
                 {
                   icon: TrendingUp,
-                  value: '90%',
-                  label: 'Python Mastery',
+                  value: '1 331 MW',
+                  label: 'MAE prévision électrique (test)',
                   gradient: 'from-purple-500 to-pink-500'
                 },
                 {
                   icon: Brain,
                   value: '88,9%',
-                  label: 'Précision ML',
+                  label: 'Précision ML (bac)',
                   gradient: 'from-blue-500 to-cyan-500'
                 },
                 {
                   icon: Code2,
-                  value: '6',
+                  value: String(projectsData.length),
                   label: 'Projets clés',
                   gradient: 'from-orange-500 to-yellow-500'
                 },
                 {
-                  icon: Award,
-                  value: '19/20',
-                  label: 'Meilleure Note',
+                  icon: FlaskConical,
+                  value: '508',
+                  label: 'Tests automatisés (projet séries temporelles)',
                   gradient: 'from-green-500 to-teal-500'
                 }
               ].map((stat, index) => (
@@ -245,22 +235,17 @@ const Skills = () => {
         >
           <div className="inline-flex flex-col md:flex-row items-center gap-4 px-8 py-6 bg-gradient-to-r from-primary/10 via-secondary/10 to-primary/10 backdrop-blur-sm border border-primary/30 rounded-2xl">
             <Sparkles size={24} className="text-primary" />
-            <p className="text-lg text-gray-300">
-              <span className="font-bold text-white">En apprentissage continu</span> - Toujours à l'affût des dernières technologies et best practices
-            </p>
+            <div className="flex flex-wrap justify-center gap-2">
+              {skills.soft.map((item) => (
+                <span key={item} className="px-3 py-1.5 bg-white/5 border border-white/10 rounded-xl text-sm font-semibold text-gray-300">
+                  {item}
+                </span>
+              ))}
+            </div>
           </div>
         </motion.div>
       </div>
 
-      <style jsx>{`
-        @keyframes shimmer {
-          0% { transform: translateX(-100%); }
-          100% { transform: translateX(100%); }
-        }
-        .animate-shimmer {
-          animation: shimmer 2s infinite;
-        }
-      `}</style>
     </section>
   );
 };
