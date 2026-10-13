@@ -6,9 +6,13 @@ export const projectsData = [
     title: "Prévision Conso Électrique",
     category: "Séries temporelles",
     media: {
-      type: "image",
+      type: "file",
+      src: "/videos/series-temporelles-demo.mp4",
       thumbnail: "/projects/series-dashboard.jpg"
     },
+    gallery: [
+      { src: "/projects/series-dashboard.jpg", caption: "Tableau de bord Streamlit : dix ans de consommation" }
+    ],
     description: "Prévision à 14 h des 24 valeurs horaires de consommation électrique de la France pour J+1, sans fuite d'information, avec 4 modèles comparés et un tableau de bord Streamlit.",
     longDescription: "Projet de séries temporelles (Lyon 2) basé sur les données RTE éCO2mix, SYNOP Météo-France et un calendrier construit à la main. Règle centrale : n'utiliser que l'information réellement disponible à 14 h. Imputation météo causale, benchmarks naïfs, modèles linéaires, gradient boosting et correction ARMA, réestimation mensuelle, puis test final utilisé une seule fois après gel écrit des choix.",
     impact: "MAE 1 331 MW (2,57 %) contre 3 205 MW pour la veille, soit -58 %, sur un test jamais utilisé pour régler les modèles",
@@ -71,10 +75,12 @@ export const projectsData = [
     title: "Mali Élevage Restaurant",
     category: "Full-Stack",
     media: {
-      type: "image",
+      type: "file",
+      src: "/videos/mali-elevage-demo.mp4",
       thumbnail: "/projects/mali-site.jpg"
     },
     gallery: [
+      { src: "/projects/mali-site.jpg", caption: "Site public Mali Poulet : commande en ligne" },
       { src: "/projects/mali-gestion.jpg", caption: "Application de gestion : prévisions financières" }
     ],
     description: "Application de gestion de restaurant en production pour un client réel : caisse, cuisine temps réel, stocks, livraison, salaires et commande en ligne, déployée avec Docker et CI/CD.",

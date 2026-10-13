@@ -139,7 +139,7 @@ const Projects = () => {
                     </div>
 
                     {/* Play Button Overlay */}
-                    {project.media.type === 'video' && (
+                    {(project.media.type === 'video' || project.media.type === 'file') && (
                       <motion.button
                         whileHover={{ scale: 1.1 }}
                         onClick={() => setSelectedProject(project)}
@@ -308,6 +308,19 @@ const Projects = () => {
                       frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
+                    />
+                  </div>
+                )}
+
+                {selectedProject.media.type === 'file' && (
+                  <div className="relative mb-8 rounded-2xl overflow-hidden border border-white/20 bg-black">
+                    <video
+                      src={selectedProject.media.src}
+                      poster={selectedProject.media.thumbnail}
+                      controls
+                      preload="metadata"
+                      playsInline
+                      className="w-full max-h-[560px]"
                     />
                   </div>
                 )}
