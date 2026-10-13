@@ -1,6 +1,6 @@
 // src/components/Contact.jsx
 import { motion } from 'framer-motion';
-import { Mail, MapPin, Linkedin, Github, Send, Sparkles, MessageCircle, Briefcase, Download } from 'lucide-react';
+import { Mail, MapPin, Linkedin, Github, Send, Sparkles, MessageCircle, Briefcase } from 'lucide-react';
 import { contact } from '../data/projectsData';
 
 const Contact = () => {
@@ -43,13 +43,6 @@ const Contact = () => {
       value: 'Voir mon profil',
       href: `https://www.linkedin.com/in/${contact.linkedin}`,
       gradient: 'from-blue-600 to-blue-800'
-    },
-    {
-      icon: Download,
-      label: 'CV',
-      value: 'Télécharger mon CV (PDF)',
-      href: '/CV-Martine-Ouedraogo.pdf',
-      gradient: 'from-emerald-500 to-teal-600'
     }
   ];
 
@@ -128,7 +121,7 @@ const Contact = () => {
           </h2>
           
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Vous recrutez en Machine Learning ou en IA ? Je serais ravie d'échanger autour d'un stage de 4 à 6 mois.
+            Vous recrutez en data science, machine learning ou data analyse ? Je serais ravie d'échanger autour d'un stage de 4 à 6 mois.
           </p>
         </motion.div>
 
@@ -178,8 +171,8 @@ const Contact = () => {
                       <a
                         key={index}
                         href={method.href}
-                        target={method.href.startsWith('http') || method.href.endsWith('.pdf') ? '_blank' : undefined}
-                        rel={method.href.startsWith('http') || method.href.endsWith('.pdf') ? 'noopener noreferrer' : undefined}
+                        target={method.href.startsWith('http') ? '_blank' : undefined}
+                        rel={method.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                       >
                         {content}
                       </a>
@@ -209,21 +202,21 @@ const Contact = () => {
                 </div>
                 
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  Je recherche un <span className="text-white font-bold">stage de 4 à 6 mois en Machine Learning / IA</span>, <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent font-bold">disponible à partir de mars 2027</span>, dans le cadre de mon Master 2 MALIA à Lyon 2.
+                  Je recherche un <span className="text-white font-bold">stage de 4 à 6 mois en Data Science, ML / IA ou Data Analyst / BI</span>, <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent font-bold">disponible à partir de mars 2027</span>, dans le cadre de mon Master 2 MALIA à Lyon 2.
                 </p>
                 
                 <div className="flex flex-wrap gap-2 mb-6">
                   <span className="px-4 py-2 bg-gradient-to-r from-purple-500/20 to-purple-500/10 border border-purple-500/30 text-purple-300 rounded-xl text-sm font-bold">
-                    Machine Learning
+                    Data Science
                   </span>
                   <span className="px-4 py-2 bg-gradient-to-r from-blue-500/20 to-blue-500/10 border border-blue-500/30 text-blue-300 rounded-xl text-sm font-bold">
-                    IA générative
+                    Machine Learning / IA
                   </span>
                   <span className="px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-cyan-500/10 border border-cyan-500/30 text-cyan-300 rounded-xl text-sm font-bold">
-                    Séries temporelles
+                    Data Analyst / BI
                   </span>
                   <span className="px-4 py-2 bg-gradient-to-r from-green-500/20 to-green-500/10 border border-green-500/30 text-green-300 rounded-xl text-sm font-bold">
-                    MLOps
+                    Full-Stack
                   </span>
                 </div>
 

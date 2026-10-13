@@ -1,13 +1,29 @@
 // src/components/Skills.jsx
 import { motion } from 'framer-motion';
-import { Brain, Code2, Globe, Cloud, Sparkles, BarChart3, TrendingUp, FlaskConical } from 'lucide-react';
+import { Brain, Code2, Globe, Cloud, Database, Sparkles, BarChart3, TrendingUp, FlaskConical } from 'lucide-react';
 import { skills, projectsData } from '../data/projectsData';
 
 const Skills = () => {
   const skillCategories = [
     {
+      id: 'analysis',
+      title: 'Analyse de données & SQL',
+      icon: Database,
+      skills: skills.analysis,
+      gradient: 'from-emerald-500 via-green-500 to-teal-500',
+      description: 'De l\'extraction à l\'analyse exploratoire'
+    },
+    {
+      id: 'bi',
+      title: 'Visualisation & BI',
+      icon: BarChart3,
+      skills: skills.bi,
+      gradient: 'from-orange-500 via-yellow-500 to-amber-500',
+      description: 'Tableaux de bord et restitution'
+    },
+    {
       id: 'ml',
-      title: 'Machine Learning & Deep Learning',
+      title: 'Data Science & Machine Learning',
       icon: Brain,
       skills: skills.ml,
       gradient: 'from-purple-500 via-pink-500 to-red-500',
@@ -23,27 +39,11 @@ const Skills = () => {
     },
     {
       id: 'mlops',
-      title: 'MLOps & Cloud',
+      title: 'Déploiement, MLOps & Cloud',
       icon: Cloud,
       skills: skills.mlops,
       gradient: 'from-blue-500 via-cyan-500 to-teal-500',
-      description: 'Déploiement, suivi d\'expériences et orchestration'
-    },
-    {
-      id: 'languages',
-      title: 'Langages & données',
-      icon: Code2,
-      skills: skills.languages,
-      gradient: 'from-orange-500 via-yellow-500 to-amber-500',
-      description: 'Programmation et traitement de données'
-    },
-    {
-      id: 'viz',
-      title: 'Visualisation & restitution',
-      icon: BarChart3,
-      skills: skills.viz,
-      gradient: 'from-emerald-500 via-green-500 to-teal-500',
-      description: 'Applications et tableaux de bord'
+      description: 'Déploiement, suivi d\'expériences, orchestration et méthodes agiles'
     },
     {
       id: 'web',

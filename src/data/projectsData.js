@@ -183,18 +183,18 @@ export const projectsData = [
       type: "image",
       thumbnail: "/projects/hospital-bi-dashboard.svg"
     },
-    description: "Système décisionnel hospitalier complet : ETL Python, modèle en étoile, dimensions enrichies et 3 dashboards Tableau orientés décision.",
+    description: "Entrepôt de données hospitalier : 10 000 consultations, 7 tables, modèle en étoile enrichi en flocon, 9 KPIs et 2 tableaux de bord Tableau interactifs avec drill-down.",
     longDescription: "Projet BI couvrant toute la chaîne décisionnelle : prétraitement de données médicales, contrôles qualité, modélisation en étoile, enrichissement métier, création d'indicateurs et dashboards Tableau pour suivre activité, coûts et tendances.",
-    impact: "1 table de faits, 6 dimensions, 3 dashboards stratégiques",
+    impact: "10 000 consultations, 7 tables, 9 KPIs, 2 dashboards Tableau avec drill-down",
     role: "ETL Python, modélisation décisionnelle, KPI et dashboards Tableau",
-    technologies: ["Python", "Pandas", "NumPy", "Tableau", "Data Warehouse", "Star Schema", "ETL"],
+    technologies: ["Python", "Pandas", "NumPy", "Tableau", "ETL", "OLAP", "Data Warehouse", "Star Schema"],
     features: [
       "Pipeline ETL documenté avec vérifications qualité",
       "Modèle en étoile avec table de faits consultations",
       "Dimensions Diagnostic et Traitement créées par normalisation",
       "Hiérarchies temporelles et segmentation patients",
-      "KPI métier : coût total, durée moyenne, top services",
-      "Dashboards Vue globale, Analyse médicale et Analyse financière"
+      "9 KPIs métier : coût total, durée moyenne, top services",
+      "Deux tableaux de bord Tableau interactifs avec drill-down"
     ],
     links: {
       github: "https://github.com/MarteOued/hospital-bi-warehouse"
@@ -312,18 +312,24 @@ export const projectsData = [
 ];
 
 export const skills = {
+  analysis: [
+    "Python (Pandas, NumPy)", "SQL (PostgreSQL, MySQL)", "SAS", "R", "EDA", "Feature Engineering",
+    "Statistiques descriptives", "VBA", "Excel avancé"
+  ],
+  bi: [
+    "Power BI (DAX, Power Query)", "Tableau", "Matplotlib", "Seaborn", "Plotly", "Streamlit",
+    "ETL", "Data Warehouse", "OLAP"
+  ],
   ml: [
-    "Apprentissage supervisé et non supervisé", "Réseaux de neurones", "Scikit-Learn", "XGBoost",
-    "Random Forest", "SVM", "ACP / PCA", "Clustering / Co-clustering",
-    "Séries temporelles (ACF / PACF)", "Validation croisée", "PyTorch", "Keras", "TensorFlow"
+    "Apprentissage supervisé et non supervisé", "Régression", "Classification", "Scikit-Learn", "XGBoost",
+    "Random Forest", "SVM", "ACP / PCA", "Clustering / Co-clustering", "Séries temporelles (ACF / PACF)",
+    "Validation croisée", "Réseaux de neurones", "PyTorch", "Keras", "TensorFlow", "NLP"
   ],
   genai: ["LLM (API OpenAI, prompt engineering)", "Ollama", "RAG", "spaCy", "TF-IDF"],
   mlops: [
-    "MLOps", "MLflow", "Docker", "Kubernetes", "AWS", "Databricks",
-    "Airflow", "Git / GitHub", "pytest", "FastAPI", "Dataiku"
+    "MLOps", "MLflow", "Docker", "Kubernetes", "AWS", "Databricks", "Airflow", "Git / GitHub",
+    "pytest", "FastAPI", "Dataiku", "Jupyter Notebook", "Agile / Scrum", "Jira", "UML"
   ],
-  languages: ["Python (Pandas, NumPy)", "R", "SQL (PostgreSQL, MySQL)", "PySpark"],
-  viz: ["Streamlit", "Plotly", "Power BI"],
   web: [
     "JavaScript", "TypeScript", "HTML / CSS", "Tailwind CSS", "React", "React Native",
     "Node.js / Express", "Django REST", "FastAPI", "Symfony 7 / PHP", "API REST", "WebSocket / Socket.io", "JWT"

@@ -42,13 +42,13 @@ const About = () => {
     { 
       icon: Target,
       label: "Data Science", 
-      value: "Machine Learning, séries temporelles, co-clustering",
+      value: "Data Science, Machine Learning, séries temporelles",
       gradient: "from-purple-500 to-pink-500"
     },
     { 
       icon: Zap,
-      label: "Développement", 
-      value: "Full-Stack Web & Mobile",
+      label: "Analyse & BI", 
+      value: "SQL, Power BI, Tableau, dashboards",
       gradient: "from-blue-500 to-cyan-500"
     },
     { 
@@ -60,7 +60,7 @@ const About = () => {
     { 
       icon: Calendar,
       label: "Recherche", 
-      value: "Stage ML / IA, 4 à 6 mois dès mars 2027",
+      value: "Stage 4 à 6 mois dès mars 2027",
       gradient: "from-orange-500 to-red-500"
     },
   ];
@@ -145,13 +145,13 @@ const About = () => {
                 
                 <div className="space-y-4 text-gray-300 leading-relaxed">
                   <p>
-                    Étudiante en <span className="text-white font-bold">Master 2 Machine Learning for AI (MALIA)</span> à l'Université Lumière Lyon 2, je me spécialise dans le <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent font-bold">Machine Learning et l'IA</span>.
+                    Étudiante en <span className="text-white font-bold">Master 2 Machine Learning for AI (MALIA)</span> à l'Université Lumière Lyon 2, je me spécialise dans la <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent font-bold">Data Science, le Machine Learning et l'analyse de données</span>.
                   </p>
                   <p>
-                    Je conçois des modèles de bout en bout : prévision de la consommation électrique nationale (<span className="text-primary font-bold">MAE de 1 331 MW</span> sur un test jamais utilisé pour régler les modèles), prédiction de résultats académiques (<span className="text-primary font-bold">88,9 % de précision</span>), package R de co-clustering et prototype d'IA générative.
+                    À la STIB, j'ai analysé des données de transport et construit des tableaux de bord. J'ai conçu un entrepôt de données hospitalier avec dashboards Tableau, et des modèles de bout en bout : prévision de la consommation électrique nationale (<span className="text-primary font-bold">MAE de 1 331 MW</span> sur un test jamais utilisé pour régler les modèles), prédiction de résultats académiques (<span className="text-primary font-bold">88,9 % de précision</span>), package R de co-clustering.
                   </p>
                   <p>
-                    Mon objectif : un <span className="text-secondary font-bold">stage de 4 à 6 mois en Machine Learning / IA à partir de mars 2027</span>, dans une équipe où je peux contribuer à des solutions d'IA fiables, avec une évaluation rigoureuse.
+                    Mon objectif : un <span className="text-secondary font-bold">stage de 4 à 6 mois en Data Science, Machine Learning / IA ou Data Analyst / BI à partir de mars 2027</span>, dans une équipe data où je peux aller de l'extraction des données jusqu'à leur restitution.
                   </p>
                 </div>
 
@@ -278,7 +278,7 @@ const About = () => {
                     </div>
                     <div>
                       <div className="text-xs text-gray-400">Disponibilité</div>
-                      <div className="text-white font-semibold">Stage ML / IA • Mars 2027</div>
+                      <div className="text-white font-semibold">Stage Data / ML • Mars 2027</div>
                     </div>
                   </div>
 

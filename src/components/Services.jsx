@@ -280,10 +280,10 @@ const Services = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-3xl blur-2xl" />
           <div className="relative bg-gradient-to-r from-primary/10 to-secondary/10 backdrop-blur-sm border border-primary/30 rounded-3xl p-12 text-center">
             <h3 className="text-3xl md:text-4xl font-black text-white mb-4">
-              Un stage ML / IA à pourvoir ?
+              Un stage data à pourvoir ?
             </h3>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Je recherche un stage de 4 à 6 mois en Machine Learning / IA, à partir de mars 2027.
+              Je recherche un stage de 4 à 6 mois en Data Science, ML / IA ou Data Analyst / BI, à partir de mars 2027.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

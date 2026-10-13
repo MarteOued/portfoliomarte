@@ -1,6 +1,6 @@
 // src/components/Hero.jsx
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, Download, ChevronRight, Sparkles, Code2, Database } from 'lucide-react';
+import { Github, Linkedin, Mail, ChevronRight, Sparkles, Code2, Database, BarChart3 } from 'lucide-react';
 import { projectsData } from '../data/projectsData';
 
 const Hero = () => {
@@ -60,7 +60,7 @@ const Hero = () => {
             >
               <Sparkles size={16} className="text-primary" />
               <span className="text-sm font-medium bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                Recherche stage ML / IA • 4 à 6 mois • Mars 2027
+                Recherche stage Data Science / ML / Data Analyst • Mars 2027
               </span>
             </motion.div>
 
@@ -97,12 +97,17 @@ const Hero = () => {
             >
               <div className="flex items-center gap-2 px-4 py-2 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10">
                 <Database size={20} className="text-primary" />
-                <span className="text-lg font-semibold text-white">Machine Learning & IA</span>
+                <span className="text-lg font-semibold text-white">Data Science & ML</span>
               </div>
               <div className="text-2xl text-white/40">×</div>
               <div className="flex items-center gap-2 px-4 py-2 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10">
-                <Code2 size={20} className="text-secondary" />
-                <span className="text-lg font-semibold text-white">Full-Stack Dev</span>
+                <BarChart3 size={20} className="text-secondary" />
+                <span className="text-lg font-semibold text-white">Data Analyst / BI</span>
+              </div>
+              <div className="text-2xl text-white/40">×</div>
+              <div className="flex items-center gap-2 px-4 py-2 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10">
+                <Code2 size={20} className="text-primary" />
+                <span className="text-lg font-semibold text-white">Full-Stack</span>
               </div>
             </motion.div>
 
@@ -113,9 +118,9 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="text-xl text-gray-400 mb-10 leading-relaxed max-w-xl"
             >
-              Étudiante en Master 2 Machine Learning for AI (MALIA) à Lyon 2, je conçois des modèles de bout en bout,
-              de la préparation des données au déploiement : séries temporelles, co-clustering, IA générative et
-              applications full-stack. Je recherche un stage de 4 à 6 mois en Machine Learning / IA à partir de mars 2027.
+              Étudiante en Master 2 Machine Learning for AI (MALIA) à Lyon 2, je travaille sur toute la chaîne de la donnée :
+              extraction, analyse, tableaux de bord, modèles de machine learning et déploiement. Je recherche un stage de
+              4 à 6 mois en Data Science, Machine Learning / IA ou Data Analyst / BI à partir de mars 2027.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -148,17 +153,6 @@ const Hero = () => {
                 Contact
               </motion.button>
 
-              <motion.a
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                href="/CV-Martine-Ouedraogo.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-8 py-4 bg-white/5 backdrop-blur-sm rounded-xl font-bold text-white border-2 border-primary/50 hover:bg-primary/10 transition-all flex items-center gap-2"
-              >
-                <Download size={20} />
-                Mon CV
-              </motion.a>
             </motion.div>
 
             {/* Social Links */}
@@ -230,7 +224,7 @@ const Hero = () => {
                   <div className="h-full bg-black rounded-3xl overflow-hidden">
                     <img 
                       src="/projects/MARTEI.jpeg"
-                      alt="Martine Ouedraogo - Machine Learning & IA"
+                      alt="Martine Ouedraogo - Data Science, ML et Data Analyst"
                       className="w-full h-full object-cover"
                     />
                   </div>
