@@ -7,8 +7,11 @@ export const projectsData = [
     category: "Full-Stack",
     media: {
       type: "image",
-      thumbnail: "/projects/mali-elevage.svg"
+      thumbnail: "/projects/mali-site.jpg"
     },
+    gallery: [
+      { src: "/projects/mali-gestion.jpg", caption: "Application de gestion : prévisions financières" }
+    ],
     description: "Application de gestion de restaurant en production pour un client réel : caisse, cuisine temps réel, stocks, livraison, salaires et commande en ligne, déployée avec Docker et CI/CD.",
     longDescription: "Projet de stage : conception et développement d'une plateforme complète pour un restaurant. API Django REST de 14 applications et 41 tables PostgreSQL, interface React par rôle (8 rôles), écran cuisine en WebSocket, site public de commande en ligne avec comptes clients, facturation PDF, journal d'audit et déploiement sur VPS derrière Caddy avec pipeline GitHub Actions.",
     impact: "En production : 14 apps Django, 41 tables, 8 rôles, 47 migrations, CI/CD",
@@ -39,7 +42,7 @@ export const projectsData = [
     category: "Séries temporelles",
     media: {
       type: "image",
-      thumbnail: "/projects/series-temporelles.png"
+      thumbnail: "/projects/series-dashboard.jpg"
     },
     description: "Prévision à 14 h des 24 valeurs horaires de consommation électrique de la France pour J+1, sans fuite d'information, avec 4 modèles comparés et un tableau de bord Streamlit.",
     longDescription: "Projet de séries temporelles (Lyon 2) basé sur les données RTE éCO2mix, SYNOP Météo-France et un calendrier construit à la main. Règle centrale : n'utiliser que l'information réellement disponible à 14 h. Imputation météo causale, benchmarks naïfs, modèles linéaires, gradient boosting et correction ARMA, réestimation mensuelle, puis test final utilisé une seule fois après gel écrit des choix.",

@@ -322,6 +322,17 @@ const Projects = () => {
                   </div>
                 )}
 
+                {selectedProject.gallery?.length > 0 && (
+                  <div className="grid md:grid-cols-2 gap-4 mb-8">
+                    {selectedProject.gallery.map((img) => (
+                      <figure key={img.src} className="rounded-2xl overflow-hidden border border-white/20 bg-white/5">
+                        <img src={img.src} alt={img.caption} loading="lazy" className="w-full object-cover" />
+                        <figcaption className="px-4 py-2 text-sm text-gray-400">{img.caption}</figcaption>
+                      </figure>
+                    ))}
+                  </div>
+                )}
+
                 {/* Impact / Role */}
                 <div className="grid md:grid-cols-2 gap-6 mb-8">
                   <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
