@@ -1,6 +1,6 @@
 // src/components/Contact.jsx
 import { motion } from 'framer-motion';
-import { Mail, MapPin, Linkedin, Github, Send, Sparkles, MessageCircle, Briefcase } from 'lucide-react';
+import { Mail, MapPin, Linkedin, Github, Send, Sparkles, MessageCircle, Briefcase, Download } from 'lucide-react';
 import { contact } from '../data/projectsData';
 
 const Contact = () => {
@@ -43,6 +43,13 @@ const Contact = () => {
       value: 'Voir mon profil',
       href: `https://www.linkedin.com/in/${contact.linkedin}`,
       gradient: 'from-blue-600 to-blue-800'
+    },
+    {
+      icon: Download,
+      label: 'CV',
+      value: 'Télécharger mon CV (PDF)',
+      href: '/CV-Martine-Ouedraogo.pdf',
+      gradient: 'from-emerald-500 to-teal-600'
     }
   ];
 
@@ -171,8 +178,8 @@ const Contact = () => {
                       <a
                         key={index}
                         href={method.href}
-                        target={method.href.startsWith('http') ? '_blank' : undefined}
-                        rel={method.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                        target={method.href.startsWith('http') || method.href.endsWith('.pdf') ? '_blank' : undefined}
+                        rel={method.href.startsWith('http') || method.href.endsWith('.pdf') ? 'noopener noreferrer' : undefined}
                       >
                         {content}
                       </a>
@@ -305,7 +312,7 @@ const Contact = () => {
                 </div>
 
                 <motion.button
-                  whileHover={{ scale: 1.02, boxShadow: "0 0 30px rgba(139, 92, 246, 0.5)" }}
+                  whileHover={{ scale: 1.02, boxShadow: "0 0 30px rgba(16, 185, 129, 0.5)" }}
                   whileTap={{ scale: 0.98 }}
                   type="submit"
                   className="w-full px-6 py-4 bg-gradient-to-r from-primary to-secondary rounded-xl text-white font-bold shadow-lg transition-all duration-300 flex items-center justify-center gap-3 group"
@@ -335,7 +342,7 @@ const Contact = () => {
               {/* Copyright */}
               <div className="text-center md:text-left">
                 <p className="text-gray-400 mb-1">
-                  © 2025 <span className="text-white font-semibold">Martine Ouedraogo</span>
+                  © 2026 <span className="text-white font-semibold">Martine Ouedraogo</span>
                 </p>
                 <p className="text-sm text-gray-500">
                   Tous droits réservés • Fait avec 💜 

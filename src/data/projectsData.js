@@ -2,6 +2,71 @@
 
 export const projectsData = [
   {
+    id: 8,
+    title: "Mali Élevage Restaurant",
+    category: "Full-Stack",
+    media: {
+      type: "image",
+      thumbnail: "/projects/mali-elevage.svg"
+    },
+    description: "Application de gestion de restaurant en production pour un client réel : caisse, cuisine temps réel, stocks, livraison, salaires et commande en ligne, déployée avec Docker et CI/CD.",
+    longDescription: "Projet de stage : conception et développement d'une plateforme complète pour un restaurant. API Django REST de 14 applications et 41 tables PostgreSQL, interface React par rôle (8 rôles), écran cuisine en WebSocket, site public de commande en ligne avec comptes clients, facturation PDF, journal d'audit et déploiement sur VPS derrière Caddy avec pipeline GitHub Actions.",
+    impact: "En production : 14 apps Django, 41 tables, 8 rôles, 47 migrations, CI/CD",
+    role: "Développement full-stack, base de données, déploiement et CI/CD",
+    technologies: ["Django", "Django REST Framework", "Channels", "React", "PostgreSQL", "Redis", "Docker", "Caddy", "GitHub Actions", "Vitest"],
+    features: [
+      "Caisse sur place, emporter et livraison avec coupons, PIN employé et déduction automatique du stock selon les recettes",
+      "Cuisine (KDS) en temps réel par WebSocket, avec repli par polling",
+      "Livraison avec code de confirmation, commande en ligne, comptes clients et programme de fidélité",
+      "Stocks, achats, dépenses, salaires, congés, planning et pointage des employés",
+      "Authentification JWT en cookies httpOnly, CSRF, limitation de débit et journal d'audit",
+      "Factures et rapports PDF, sauvegardes PostgreSQL quotidiennes, déploiement Docker Compose automatisé"
+    ],
+    links: {
+      github: "https://github.com/MarteOued/mali-elevage-restaurant"
+    },
+    metrics: {
+      duration: "Mai - Septembre 2026",
+      team: "Projet de stage",
+      status: "En production"
+    },
+    gradient: "from-orange-500 to-red-600",
+    icon: "🍗"
+  },
+  {
+    id: 7,
+    title: "Prévision Conso Électrique",
+    category: "Séries temporelles",
+    media: {
+      type: "image",
+      thumbnail: "/projects/series-temporelles.png"
+    },
+    description: "Prévision à 14 h des 24 valeurs horaires de consommation électrique de la France pour J+1, sans fuite d'information, avec 4 modèles comparés et un tableau de bord Streamlit.",
+    longDescription: "Projet de séries temporelles (Lyon 2) basé sur les données RTE éCO2mix, SYNOP Météo-France et un calendrier construit à la main. Règle centrale : n'utiliser que l'information réellement disponible à 14 h. Imputation météo causale, benchmarks naïfs, modèles linéaires, gradient boosting et correction ARMA, réestimation mensuelle, puis test final utilisé une seule fois après gel écrit des choix.",
+    impact: "MAE 1 331 MW (2,57 %) contre 3 205 MW pour la veille, soit -58 %",
+    role: "Pipeline de données, modélisation, évaluation sans fuite, tests et tableau de bord",
+    technologies: ["Python", "Pandas", "Scikit-Learn", "Statsmodels", "Streamlit", "Pytest", "Jupyter"],
+    features: [
+      "Protocole anti-fuite : seule l'information connue à 14 h est utilisée, avec tests automatiques",
+      "Imputation spatiale et temporelle causale de 40 stations météo SYNOP",
+      "Benchmarks naïfs, modèles linéaires par heure, gradient boosting et correction ARMA",
+      "Apprentissage 2016-2022, validation 2023, test 2024-2025 et bonus 2026",
+      "Significativité des écarts (Diebold-Mariano) et analyse des pires jours",
+      "Tableau de bord Streamlit en 12 pages, couleurs adaptées aux daltoniens"
+    ],
+    links: {
+      demo: "https://prevision-electricite-france.streamlit.app/",
+      github: "https://github.com/MarteOued/Projet-series-temporelles"
+    },
+    metrics: {
+      duration: "Octobre 2026",
+      team: "Projet en binôme, Université Lyon 2",
+      status: "Terminé"
+    },
+    gradient: "from-sky-500 to-indigo-600",
+    icon: "⚡"
+  },
+  {
     id: 1,
     title: "Bac Prediction ML",
     category: "Machine Learning",

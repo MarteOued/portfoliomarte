@@ -1,6 +1,7 @@
 // src/components/Hero.jsx
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, ChevronRight, Sparkles, Code2, Database } from 'lucide-react';
+import { Github, Linkedin, Mail, Download, ChevronRight, Sparkles, Code2, Database } from 'lucide-react';
+import { projectsData } from '../data/projectsData';
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -125,7 +126,7 @@ const Hero = () => {
               className="flex flex-wrap gap-4 mb-12"
             >
               <motion.button
-                whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(139, 92, 246, 0.5)" }}
+                whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(16, 185, 129, 0.5)" }}
                 whileTap={{ scale: 0.95 }}
                 onClick={scrollToProjects}
                 className="group relative px-8 py-4 bg-gradient-to-r from-primary to-secondary rounded-xl font-bold text-white overflow-hidden"
@@ -146,6 +147,18 @@ const Hero = () => {
                 <Mail size={20} />
                 Contact
               </motion.button>
+
+              <motion.a
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                href="/CV-Martine-Ouedraogo.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-4 bg-white/5 backdrop-blur-sm rounded-xl font-bold text-white border-2 border-primary/50 hover:bg-primary/10 transition-all flex items-center gap-2"
+              >
+                <Download size={20} />
+                Mon CV
+              </motion.a>
             </motion.div>
 
             {/* Social Links */}
@@ -202,7 +215,7 @@ const Hero = () => {
                 className="absolute -right-8 bottom-32 bg-black/80 backdrop-blur-xl border border-secondary/30 rounded-2xl p-4 shadow-2xl z-20"
               >
                 <div className="text-3xl font-black bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent">
-                  6
+                  {projectsData.length}
                 </div>
                 <div className="text-xs text-gray-400 font-medium">Projets clés</div>
               </motion.div>

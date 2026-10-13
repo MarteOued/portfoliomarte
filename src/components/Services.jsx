@@ -288,7 +288,7 @@ const Services = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(139, 92, 246, 0.5)" }}
+                whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(16, 185, 129, 0.5)" }}
                 whileTap={{ scale: 0.95 }}
                 onClick={scrollToContact}
                 className="px-8 py-4 bg-gradient-to-r from-primary to-secondary rounded-xl font-bold text-white shadow-lg transition-all flex items-center justify-center gap-2"
